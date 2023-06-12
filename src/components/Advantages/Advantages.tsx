@@ -10,6 +10,7 @@ import {
   VStack,
 } from "@chakra-ui/react";
 import { CheckIcon } from "@chakra-ui/icons";
+import { color } from "framer-motion";
 
 // Replace test data with your own
 const features =
@@ -66,7 +67,7 @@ export default function Advantages() {
                 <Icon as={CheckIcon} />
               </Box>
               <VStack align={"start"}>
-                <Text fontWeight={700} fontSize={20}>{feature.title}</Text>
+                <Text _hover={{color:"orange"}} fontWeight={700} fontSize={20} >{feature.title}</Text>
                 <Text color={"gray.600"}>{feature.text}</Text>
               </VStack>
             </HStack>

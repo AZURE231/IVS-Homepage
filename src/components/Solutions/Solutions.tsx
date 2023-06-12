@@ -61,7 +61,7 @@ export default class Responsive extends Component {
       arrows: false,
     };
     return (
-      <>
+      <Container maxW={"90%"}>
         <Stack
           spacing={4}
           as={Container}
@@ -78,7 +78,7 @@ export default class Responsive extends Component {
           <PeopleAvatar/>
         </Slider>
         
-      </>
+      </Container>
     );
   }
 }

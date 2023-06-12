@@ -120,7 +120,7 @@ export default class Responsive extends Component {
     };
 
     return (
-      <>
+      <Container maxW={"full"}>
         <Stack
           spacing={4}
           as={Container}
@@ -131,7 +131,9 @@ export default class Responsive extends Component {
         >
           <Heading fontSize={"3xl"}>ĐỐI TÁC CỦA CHÚNG TÔI</Heading>
         </Stack>
-      <Container maxW={'90%'}>          <Slider {...settings}>
+        <Container maxW={"100%"}>
+          {" "}
+          <Slider {...settings}>
             {/* <Card
             heading={products[0].head}
             icon={<Icon as={FcAssistant} w={10} h={10} />}
@@ -154,101 +156,77 @@ export default class Responsive extends Component {
               p={2}
               h={"100px"}
               w={"full"}
-              src={
-                "https://indivisys.vn/img/lgo-ntt.jpeg"
-              }
-            />
-            <Image
-            p={2}
-              h={"100px"}
-              w={"full"}
-              src={
-                "https://indivisys.vn/img/partner2.jpeg"
-              }
-            />
-            <Image
-            p={2}
-              h={"100px"}
-              w={"full"}
-              src={
-                "https://indivisys.vn/img/logo_kddi_01.jpeg"
-              }
-            />
-            <Image
-            p={2}
-              h={"100px"}
-              w={"full"}
-              src={
-                "https://indivisys.vn/img/Cybozu-logo-2.jpeg"
-              }
-            />
-            <Image
-            p={2}
-              h={"100px"}
-              w={"full"}
-              src={
-                "https://indivisys.vn/img/logo_chatwork.jpeg"
-              }
-            />
-            <Image
-            p={2}
-              h={"100px"}
-              w={"full"}
-              src={
-                "https://indivisys.vn/img/logo_keyence.jpeg"
-              }
+              src={"https://indivisys.vn/img/lgo-ntt.jpeg"}
             />
             <Image
               p={2}
               h={"100px"}
               w={"full"}
-              src={
-                "https://indivisys.vn/img/lgo-ntt.jpeg"
-              }
+              src={"https://indivisys.vn/img/partner2.jpeg"}
             />
             <Image
-            p={2}
+              p={2}
               h={"100px"}
               w={"full"}
-              src={
-                "https://indivisys.vn/img/partner2.jpeg"
-              }
+              src={"https://indivisys.vn/img/logo_kddi_01.jpeg"}
             />
             <Image
-            p={2}
+              p={2}
               h={"100px"}
               w={"full"}
-              src={
-                "https://indivisys.vn/img/logo_kddi_01.jpeg"
-              }
+              src={"https://indivisys.vn/img/Cybozu-logo-2.jpeg"}
             />
             <Image
-            p={2}
+              p={2}
               h={"100px"}
               w={"full"}
-              src={
-                "https://indivisys.vn/img/Cybozu-logo-2.jpeg"
-              }
+              src={"https://indivisys.vn/img/logo_chatwork.jpeg"}
             />
             <Image
-            p={2}
+              p={2}
               h={"100px"}
               w={"full"}
-              src={
-                "https://indivisys.vn/img/logo_chatwork.jpeg"
-              }
+              src={"https://indivisys.vn/img/logo_keyence.jpeg"}
             />
             <Image
-            p={2}
+              p={2}
               h={"100px"}
               w={"full"}
-              src={
-                "https://indivisys.vn/img/logo_keyence.jpeg"
-              }
+              src={"https://indivisys.vn/img/lgo-ntt.jpeg"}
+            />
+            <Image
+              p={2}
+              h={"100px"}
+              w={"full"}
+              src={"https://indivisys.vn/img/partner2.jpeg"}
+            />
+            <Image
+              p={2}
+              h={"100px"}
+              w={"full"}
+              src={"https://indivisys.vn/img/logo_kddi_01.jpeg"}
+            />
+            <Image
+              p={2}
+              h={"100px"}
+              w={"full"}
+              src={"https://indivisys.vn/img/Cybozu-logo-2.jpeg"}
+            />
+            <Image
+              p={2}
+              h={"100px"}
+              w={"full"}
+              src={"https://indivisys.vn/img/logo_chatwork.jpeg"}
+            />
+            <Image
+              p={2}
+              h={"100px"}
+              w={"full"}
+              src={"https://indivisys.vn/img/logo_keyence.jpeg"}
             />
           </Slider>
-          </Container>
-      </>
+        </Container>
+      </Container>
     );
   }
 }

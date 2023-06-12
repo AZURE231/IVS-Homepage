@@ -29,36 +29,36 @@ import { BsGithub, BsDiscord, BsPerson } from "react-icons/bs";
 
 export default function Contact() {
   return (
-    <>
-      <Stack spacing={4} as={Container} maxW={"3xl"} textAlign={"center"} mt={"60px"}>
+    <Container backgroundColor={"#f2f2f2"} maxW={"full"} mt={20}>
+      <Stack spacing={4} as={Container} maxW={"3xl"} textAlign={"center"} pt={"40px"}>
         <Heading fontSize={"3xl"}>CONTACT US</Heading>
         <Text color={"gray.600"} fontSize={"xl"}>
         Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
         </Text>
       </Stack>
-      <Container bg="white" maxW="full" mt={0} centerContent overflow="hidden">
+      <Container bg="#f2f2f2" maxW="full" centerContent overflow="hidden">
         <VStack>
           <Box
             bg="white"
             color="black"
             borderRadius="lg"
             m={{ sm: 4, md: 16, lg: 10 }}
-            p={{ sm: 5, md: 5, lg: 16 }}
+            p={{ sm: 5, md: 5, lg: 5 }}
           >
-            <Box p={4}>
-              <Wrap spacing={{ base: 20, sm: 3, md: 5, lg: 20 }}>
+            <Box p={0}>
+              <VStack>
                 <WrapItem>
                   <Box>
-                    <Box py={{ base: 5, sm: 5, md: 8, lg: 10 }}>
+                    <Box py={{ base: 5, sm: 5, md: 8, lg: 0 }}>
                       <HStack pl={0} spacing={3} alignItems="flex-start">
                         <Button
                           size="md"
                           height="48px"
                           width="200px"
                           variant="ghost"
-                          color="#DCE2FF"
-                          _hover={{ border: "2px solid #1C6FEB" }}
-                          leftIcon={<MdPhone color="#1970F1" size="20px" />}
+                          color="black"
+                          _hover={{ border: "2px solid black" }}
+                          leftIcon={<MdPhone color="black" size="20px" />}
                         >
                           +91-988888888
                         </Button>
@@ -67,9 +67,9 @@ export default function Contact() {
                           height="48px"
                           width="200px"
                           variant="ghost"
-                          color="#DCE2FF"
-                          _hover={{ border: "2px solid #1C6FEB" }}
-                          leftIcon={<MdEmail color="#1970F1" size="20px" />}
+                          color="black"
+                          _hover={{ border: "2px solid black" }}
+                          leftIcon={<MdEmail color="black" size="20px" />}
                         >
                           hello@abc.com
                         </Button>
@@ -78,52 +78,22 @@ export default function Contact() {
                           height="48px"
                           width="200px"
                           variant="ghost"
-                          color="#DCE2FF"
-                          _hover={{ border: "2px solid #1C6FEB" }}
+                          color="black"
+                          _hover={{ border: "2px solid black" }}
                           leftIcon={
-                            <MdLocationOn color="#1970F1" size="20px" />
+                            <MdLocationOn color="black" size="20px" />
                           }
                         >
                           Karnavati, India
                         </Button>
                       </HStack>
                     </Box>
-                    <HStack
-                      mt={{ lg: 10, md: 10 }}
-                      spacing={5}
-                      px={5}
-                      alignItems="flex-start"
-                    >
-                      <IconButton
-                        aria-label="facebook"
-                        variant="ghost"
-                        size="lg"
-                        isRound={true}
-                        _hover={{ bg: "#0D74FF" }}
-                        icon={<MdFacebook size="28px" />}
-                      />
-                      <IconButton
-                        aria-label="github"
-                        variant="ghost"
-                        size="lg"
-                        isRound={true}
-                        _hover={{ bg: "#0D74FF" }}
-                        icon={<BsGithub size="28px" />}
-                      />
-                      <IconButton
-                        aria-label="discord"
-                        variant="ghost"
-                        size="lg"
-                        isRound={true}
-                        _hover={{ bg: "#0D74FF" }}
-                        icon={<BsDiscord size="28px" />}
-                      />
-                    </HStack>
+                  
                   </Box>
                 </WrapItem>
-                <WrapItem>
-                  <Box bg="white" borderRadius="lg">
-                    <Box m={8} color="#0B0E3F">
+                <WrapItem width={"full"}>
+                  <Box bg="white" borderRadius="lg" width={"full"}>
+                    <Box m={8} color="#0B0E3F" >
                       <VStack spacing={5}>
                         <FormControl id="name">
                           <FormLabel>Your Name</FormLabel>
@@ -158,9 +128,9 @@ export default function Contact() {
                         <FormControl id="name" float="right">
                           <Button
                             variant="solid"
-                            bg="#0D74FF"
+                            bg="orange"
                             color="white"
-                            _hover={{}}
+                            _hover={{bg:"green"}}
                           >
                             Send Message
                           </Button>
@@ -169,11 +139,11 @@ export default function Contact() {
                     </Box>
                   </Box>
                 </WrapItem>
-              </Wrap>
+              </VStack>
             </Box>
           </Box>
         </VStack>
       </Container>
-    </>
+    </Container>
   );
 }

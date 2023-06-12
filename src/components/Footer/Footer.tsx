@@ -83,11 +83,11 @@ import {
             templateColumns={{ sm: '1fr 1fr', md: '2fr 1fr 1fr 2fr' }}
             spacing={8}>
             <Stack spacing={6}>
-              <Box>
+              {/* <Box>
                 <Logo color={useColorModeValue('gray.700', 'white')} />
-              </Box>
+              </Box> */}
               <Text fontSize={'sm'}>
-                © 2022 Chakra Templates. All rights reserved
+              Copyright © 2023 All rights reserved | by IVS.Co,.Ltd
               </Text>
               <Stack direction={'row'} spacing={6}>
                 <SocialButton label={'Twitter'} href={'#'}>

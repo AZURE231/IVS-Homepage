@@ -74,7 +74,7 @@ export default function BusinessFeature() {
           {products.map((product) => (
             <Card
               heading={product.head}
-              icon={<Icon as={FcAssistant} w={10} h={10} />}
+              icon={<Icon as={FcAssistant} w={10} h={10}/>}
               description= {product.description}
               href={product.href}
             />

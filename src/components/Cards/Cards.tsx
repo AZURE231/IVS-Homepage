@@ -38,16 +38,16 @@ export default function Card ({ heading, description, icon, href }: CardProps) {
           }
           objectFit={"cover"}
         />
-        <Flex justify={"center"} mt={-12}>
+        <Flex justify={"center"} mt={-12} _hover={{color:"orange"}}>
           {icon}
         </Flex>
 
-        <Box p={6}>
+        <Box p={6} cursor={"pointer"}>
           <Stack spacing={0} align={"center"} mb={5}>
-            <Heading fontSize={"2xl"} fontWeight={500} fontFamily={"body"}>
+            <Heading mt={"10px"} fontSize={"2xl"} fontWeight={500} fontFamily={"body"} _hover={{color:"orange"}}>
               {heading}
             </Heading>
-            <Text color={"gray.500"}>{description}</Text>
+            <Text mt={"10px"} color={"gray.500"}>{description}</Text>
           </Stack>
         </Box>
       </Box>

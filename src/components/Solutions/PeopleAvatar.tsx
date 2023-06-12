@@ -21,7 +21,7 @@ export default function PeopleAvatar() {
     <VStack
       justifyContent="center"
       alignItems="center"
-      h="216px"
+      h="250px"
       w="full"
       overflow="hidden">
       {/* Ideally, only the box should be used. The <Flex /> is used to style the preview. */}
@@ -43,8 +43,6 @@ export default function PeopleAvatar() {
           as={Container}
           maxW={"3xl"}
           textAlign={"center"}
-          pt={"0px"}
-          pb={"0px"}
         >
           <Heading fontSize={"2xl"}>{"Quản lý sản xuất trong may mặc"}</Heading>
           <Text color={"gray.600"} fontSize={"xl"}>
