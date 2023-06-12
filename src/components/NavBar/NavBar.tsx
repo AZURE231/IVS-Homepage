@@ -28,8 +28,8 @@ export default function WithSubnavigation() {
   return (
     <Box as="header" position="fixed" w="100%" top={0} zIndex={100}>
       <Flex
-        bg={useColorModeValue("white", "gray.800")}
-        color={useColorModeValue("gray.600", "white")}
+        bg={useColorModeValue("black", "gray.800")}
+        color={useColorModeValue("while", "white")}
         minH={"60px"}
         py={{ base: 2 }}
         px={{ base: 4 }}
@@ -54,14 +54,16 @@ export default function WithSubnavigation() {
         </Flex>
         <Flex flex={{ base: 1 }} justify={{ base: "center", md: "start" }}>
           <Text
+            flex={{ base: 1 }} 
+            justify={{ base: "center", md: "start" }}
             textAlign={useBreakpointValue({ base: "center", md: "left" })}
             fontFamily={"heading"}
-            color={useColorModeValue("gray.800", "white")}
+            color={useColorModeValue("white", "white")}
           >
             IVS
           </Text>
 
-          <Flex display={{ base: "none", md: "flex" }} ml={10}>
+          <Flex display={{ base: "none", md: "flex" }} ml={10} >
             <DesktopNav />
           </Flex>
         </Flex>
@@ -75,8 +77,8 @@ export default function WithSubnavigation() {
 }
 
 const DesktopNav = () => {
-  const linkColor = useColorModeValue("gray.600", "gray.200");
-  const linkHoverColor = useColorModeValue("gray.800", "white");
+  const linkColor = useColorModeValue("white", "white");
+  const linkHoverColor = useColorModeValue("orange", "orange");
   const popoverContentBgColor = useColorModeValue("white", "gray.800");
 
   return (
@@ -137,7 +139,7 @@ const DesktopSubNav = ({ label, href, subLabel }: NavItem) => {
         <Box>
           <Text
             transition={"all .3s ease"}
-            _groupHover={{ color: "pink.400" }}
+            _groupHover={{ color: "orange" }}
             fontWeight={500}
           >
             {label}
@@ -228,6 +230,7 @@ const MobileNavItem = ({ label, children, href }: NavItem) => {
 };
 
 interface NavItem {
+  id: number;
   label: string;
   subLabel?: string;
   children?: Array<NavItem>;
@@ -236,41 +239,105 @@ interface NavItem {
 
 const NAV_ITEMS: Array<NavItem> = [
   {
-    label: "Inspiration",
-    children: [
-      {
-        label: "Explore Design Work",
-        subLabel: "Trending Design to inspire you",
-        href: "#",
-      },
-      {
-        label: "New & Noteworthy",
-        subLabel: "Up-and-coming Designers",
-        href: "#",
-      },
-    ],
-  },
-  {
-    label: "Find Work",
-    children: [
-      {
-        label: "Job Board",
-        subLabel: "Find your dream design job",
-        href: "#",
-      },
-      {
-        label: "Freelance Projects",
-        subLabel: "An exclusive list for contract work",
-        href: "#",
-      },
-    ],
-  },
-  {
-    label: "Learn Design",
+    id: 0,
+    label: "TRANG CHỦ",
     href: "#",
   },
   {
-    label: "Hire Designers",
+    id: 1,
+    label: "SẢN PHẨM",
+    children: [
+      {
+        id: 0,
+        label: "Quản lý nhân sự",
+        href: "#",
+      },
+      {
+        id: 1,
+        label: "Quản lý tồn kho",
+        href: "#",
+      },
+      {
+        id: 2,
+        label: "Quản lý sản xuất",
+        href: "#",
+      },
+      {
+        id: 3,
+        label: "Quy trình phê duyệt",
+        children: [
+          {id: 0,
+            label: "Phê duyệt nhân sự",
+            href: "#"
+          },
+          {id: 1,
+            label: "Quản lý hồ sơ giấy tờ",
+            href: "#"
+          }
+
+        ]
+      },  
+      {
+        id: 4,
+        label: "kintone",
+        href: "#",
+      }, 
+    ],
+  },
+  {
+    id: 3,
+    label: "DỊCH VỤ",
+    children: [
+      {
+        id: 0,
+        label: "Tư vấn giải pháp",
+        href: "#",
+      },
+      {
+        id: 1,
+        label: "Quản trị nhân sự",
+        href: "#",
+      },
+      {
+        id: 2,
+        label: "Xây dựng phần mềm",
+        href: "#",
+      },
+      {
+        id: 3,
+        label: "Dịch vụ bảo trì",
+        href: "#",
+      },
+      {
+        id: 4,
+        label: "Xây dựng ứng dụng di động",
+        href: "#",
+      },
+    ],
+  },
+  {
+    id: 4,
+    label: "SỰ KIỆN",
+    href: "#",
+  },
+  {
+    id: 5,
+    label: "GIẢI PHÁP",
+    href: "#",
+  },
+  {
+    id: 6,
+    label: "KHÁCH HÀNG",
+    href: "#",
+  },
+  {
+    id: 7,
+    label: "VIDEO",
+    href: "#",
+  },
+  {
+    id: 8,
+    label: "LIÊN HỆ",
     href: "#",
   },
 ];
