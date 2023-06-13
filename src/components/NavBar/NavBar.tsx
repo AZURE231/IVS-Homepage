@@ -56,6 +56,7 @@ export default function WithSubnavigation() {
     <Box as="header" position="fixed" w="100%" top={0} zIndex={100}>
       <Flex
         bg={bgColor}
+        transition={"all 1s"}
         color={useColorModeValue("while", "white")}
         minH={minHeight}
         py={{ base: 2 }}
