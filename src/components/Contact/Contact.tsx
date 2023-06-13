@@ -29,8 +29,8 @@ import { BsGithub, BsDiscord, BsPerson } from "react-icons/bs";
 
 export default function Contact() {
   return (
-    <Container backgroundColor={"#f2f2f2"} maxW={"full"} mt={20}>
-      <Stack spacing={4} as={Container} maxW={"3xl"} textAlign={"center"} pt={"40px"}>
+    <Container backgroundColor={"#f2f2f2"} maxW={"full"} mt={"200px"}>
+      <Stack spacing={4} as={Container} maxW={"3xl"} textAlign={"center"} pt={"100px"}>
         <Heading fontSize={"3xl"}>CONTACT US</Heading>
         <Text color={"gray.600"} fontSize={"xl"}>
         Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque

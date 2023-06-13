@@ -22,20 +22,44 @@ import {
   ChevronRightIcon,
 } from "@chakra-ui/icons";
 
+import { useEffect, useState } from 'react';
+
 export default function WithSubnavigation() {
   const { isOpen, onToggle } = useDisclosure();
+  const [ isScrolled, setIsScrolled ] = useState(false);
+  const [ bgColor, setBgColor ] = useState('transparent');
+  const [ minHeight, setMinHeight ] = useState('100px');
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollTop = window.scrollY;
+      if (scrollTop > 0 && !isScrolled) {
+        setIsScrolled(true);
+        setBgColor('rgba(0, 0, 0, 0.7)')
+        setMinHeight('40px')
+      } else if (scrollTop === 0 && isScrolled) {
+        setIsScrolled(false);
+        setBgColor('transparent')
+        setMinHeight('100px')
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, [isScrolled]);
+
 
   return (
     <Box as="header" position="fixed" w="100%" top={0} zIndex={100}>
       <Flex
-        bg={useColorModeValue("black", "gray.800")}
+        bg={bgColor}
         color={useColorModeValue("while", "white")}
-        minH={"60px"}
+        minH={minHeight}
         py={{ base: 2 }}
         px={{ base: 4 }}
-        borderBottom={1}
-        borderStyle={"solid"}
-        borderColor={useColorModeValue("gray.200", "gray.900")}
         align={"center"}
       >
         <Flex
@@ -55,10 +79,10 @@ export default function WithSubnavigation() {
         <Flex flex={{ base: 1 }} justify={{ base: "center", md: "start" }}>
           <Text
             flex={{ base: 1 }} 
-            justify={{ base: "center", md: "start" }}
             textAlign={useBreakpointValue({ base: "center", md: "left" })}
             fontFamily={"heading"}
-            color={useColorModeValue("white", "white")}
+            fontSize={"20px"}
+            color={useColorModeValue("orange", "orange")}
           >
             IVS
           </Text>

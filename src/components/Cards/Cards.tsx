@@ -1,4 +1,5 @@
 import {
+  Avatar,
   Heading,
   Box,
   Center,
@@ -7,6 +8,7 @@ import {
   Text,
   Stack,
   useColorModeValue,
+  Container,
 } from "@chakra-ui/react";
 
 import { ReactElement } from "react";
@@ -16,15 +18,16 @@ interface CardProps {
   description: string;
   icon: ReactElement;
   href: string;
+  imgs: string;
 }
 
-export default function Card ({ heading, description, icon, href }: CardProps) {
+export default function Card({ heading, description, icon, href, imgs }: CardProps) {
   return (
     <Center py={6}>
       <Box
         maxW={"350px"}
         w={"full"}
-        maxH={"500px"}
+        maxH={"600px"}
         bg={useColorModeValue("white", "gray.800")}
         boxShadow={"2xl"}
         rounded={"md"}
@@ -34,23 +37,37 @@ export default function Card ({ heading, description, icon, href }: CardProps) {
           h={"200px"}
           w={"full"}
           src={
-            "https://images.unsplash.com/photo-1612865547334-09cb8cb455da?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80"
+            imgs
           }
           objectFit={"cover"}
         />
-        <Flex justify={"center"} mt={-12} _hover={{color:"orange"}}>
-          {icon}
+        <Flex justify={"center"} mt={-8}>
+          <Center
+            backgroundColor={"white"}
+            rounded={"100%"}
+            boxSize={"60px"}
+          >
+            {icon}
+          </Center>
         </Flex>
 
         <Box p={6} cursor={"pointer"}>
           <Stack spacing={0} align={"center"} mb={5}>
-            <Heading mt={"10px"} fontSize={"2xl"} fontWeight={500} fontFamily={"body"} _hover={{color:"orange"}}>
+            <Heading
+              mt={"0px"}
+              fontSize={"2xl"}
+              fontWeight={500}
+              fontFamily={"body"}
+              _hover={{ color: "orange" }}
+            >
               {heading}
             </Heading>
-            <Text mt={"10px"} color={"gray.500"}>{description}</Text>
+            <Text mt={"10px"} color={"gray.500"}>
+              {description}
+            </Text>
           </Stack>
         </Box>
       </Box>
     </Center>
   );
-};
+}

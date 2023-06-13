@@ -19,6 +19,7 @@ export default function PeopleAvatar() {
 
   return (
     <VStack
+      bgColor={"#f2f2f2"}
       justifyContent="center"
       alignItems="center"
       h="250px"

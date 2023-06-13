@@ -61,7 +61,7 @@ export default class Responsive extends Component {
       arrows: false,
     };
     return (
-      <Container maxW={"90%"}>
+      <Container maxW={"full"} maxH={"150px"} bgColor={"#f2f2f2"} mt={"60px"} mb={"60px"}>
         <Stack
           spacing={4}
           as={Container}
