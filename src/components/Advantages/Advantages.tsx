@@ -78,7 +78,7 @@ export default function Advantages() {
                 <Icon as={feature.logo} fontSize={"50px"}/>
               </Box>
               <VStack align={"start"}>
-                <Text _hover={{color:"orange"}} fontWeight={700} fontSize={20} >{feature.title}</Text>
+                <Text _hover={{color:"orange"}} fontWeight={700} fontSize={20} cursor={"pointer"}>{feature.title}</Text>
                 <Text color={"gray.600"}>{feature.text}</Text>
               </VStack>
             </HStack>

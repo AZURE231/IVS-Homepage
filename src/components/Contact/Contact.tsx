@@ -17,6 +17,7 @@ import {
   InputGroup,
   InputLeftElement,
   Textarea,
+  SimpleGrid,
 } from "@chakra-ui/react";
 import {
   MdPhone,
@@ -30,7 +31,7 @@ import { BsGithub, BsDiscord, BsPerson } from "react-icons/bs";
 export default function Contact() {
   return (
     <Container backgroundColor={"#f2f2f2"} maxW={"full"} mt={"200px"}>
-      <Stack spacing={4} as={Container} maxW={"3xl"} textAlign={"center"} pt={"100px"}>
+      <Stack spacing={4} as={Container} maxW={"3xl"} textAlign={"center"} pt={"150px"}>
         <Heading fontSize={"3xl"}>CONTACT US</Heading>
         <Text color={"gray.600"} fontSize={"xl"}>
         Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
@@ -46,15 +47,16 @@ export default function Contact() {
             p={{ sm: 5, md: 5, lg: 5 }}
           >
             <Box p={0}>
-              <VStack>
+              <VStack  maxW={"full"}>
                 <WrapItem>
-                  <Box>
-                    <Box py={{ base: 5, sm: 5, md: 8, lg: 0 }}>
-                      <HStack pl={0} spacing={3} alignItems="flex-start">
+                  <Box as={"form"}>
+                    <Box py={{ base: 5, sm: 5, md: 8, lg: 10 }}>
+                      <SimpleGrid columns={{ base: 1, md: 2, lg: 3 }} spacing={10}>
+                      
                         <Button
                           size="md"
                           height="48px"
-                          width="200px"
+                          
                           variant="ghost"
                           color="black"
                           _hover={{ border: "2px solid black" }}
@@ -65,7 +67,7 @@ export default function Contact() {
                         <Button
                           size="md"
                           height="48px"
-                          width="200px"
+                          
                           variant="ghost"
                           color="black"
                           _hover={{ border: "2px solid black" }}
@@ -76,7 +78,7 @@ export default function Contact() {
                         <Button
                           size="md"
                           height="48px"
-                          width="200px"
+                         
                           variant="ghost"
                           color="black"
                           _hover={{ border: "2px solid black" }}
@@ -86,7 +88,7 @@ export default function Contact() {
                         >
                           Karnavati, India
                         </Button>
-                      </HStack>
+                      </SimpleGrid>
                     </Box>
                   
                   </Box>

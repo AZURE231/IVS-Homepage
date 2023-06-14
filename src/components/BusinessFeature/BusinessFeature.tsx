@@ -97,56 +97,6 @@ export default function BusinessFeature() {
             />
           ))}
         </SimpleGrid>
-        {/* <Flex flexWrap="wrap" gridGap={6} justify="center">
-          <Card
-            heading={"IFMS"}
-            icon={<Icon as={FcAssistant} w={10} h={10} />}
-            description={
-              "Lorem ipsum dolor sit amet, consectetur elit, sed do eiusmod tempor ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
-            }
-            href={"#"}
-          />
-          <Card
-            heading={"IHRM"}
-            icon={<Icon as={FcCollaboration} w={10} h={10} />}
-            description={
-              "Sed ut perspiciatis unde omnis iste natus error sit voluptatem doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo."
-            }
-            href={"#"}
-          />
-          <Card
-            heading={"IWMS"}
-            icon={<Icon as={FcDonate} w={10} h={10} />}
-            description={
-              "Nemo enim ipsam voluptatem quia voluptas sit aut odit aut fugit, sed quia magni dolores eos qui ratione voluptatem sequi nesciunt Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet."
-            }
-            href={"#"}
-          />
-          <Card
-            heading={"IVS Workflow"}
-            icon={<Icon as={FcManager} w={10} h={10} />}
-            description={
-              "Lorem ipsum dolor sit amet, consectetur elit, sed do eiusmod tempor ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
-            }
-            href={"#"}
-          />
-          <Card
-            heading={"kintone"}
-            icon={<Icon as={FcAbout} w={10} h={10} />}
-            description={
-              "Sed ut perspiciatis unde omnis iste natus error sit voluptatem doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo."
-            }
-            href={"#"}
-          />
-          <Card
-            heading={"Aizen"}
-            icon={<Icon as={FcAbout} w={10} h={10} />}
-            description={
-              "Nemo enim ipsam voluptatem quia voluptas sit aut odit aut fugit, sed quia magni dolores eos qui ratione voluptatem sequi nesciunt Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet."
-            }
-            href={"#"}
-          />
-        </Flex> */}
       </Container>
     </Box>
   );

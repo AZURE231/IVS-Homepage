@@ -1,27 +1,6 @@
-//
-import Card from "../Cards/Cards";
-import {
-  Icon,
-  Box,
-  Flex,
-  Heading,
-  Text,
-  Stack,
-  Container,
-  Avatar,
-  useColorModeValue,
-} from "@chakra-ui/react";
-import Hero from "../Hero/Hero";
-// import   './global.css'
+import { Heading, Stack, Container } from "@chakra-ui/react";
 import React, { Component } from "react";
 import Slider from "react-slick";
-import {
-  FcAbout,
-  FcAssistant,
-  FcCollaboration,
-  FcDonate,
-  FcManager,
-} from "react-icons/fc";
 import PeopleAvatar from "./PeopleAvatar";
 
 const products = [
@@ -61,7 +40,13 @@ export default class Responsive extends Component {
       arrows: false,
     };
     return (
-      <Container maxW={"full"} maxH={"150px"} bgColor={"#f2f2f2"} mt={"60px"} mb={"60px"}>
+      <Container
+        maxW={"full"}
+        maxH={"150px"}
+        bgColor={"#f2f2f2"}
+        mt={"60px"}
+        mb={"60px"}
+      >
         <Stack
           spacing={4}
           as={Container}
@@ -73,11 +58,14 @@ export default class Responsive extends Component {
           <Heading fontSize={"3xl"}>MỘT SỐ GIẢI PHÁP NỔI BẬT</Heading>
         </Stack>
         <Slider {...settings}>
-          <PeopleAvatar/>
-          <PeopleAvatar/>
-          <PeopleAvatar/>
+          {products.map((product) => (
+            <PeopleAvatar
+              id={product.id}
+              head={product.head}
+              description={product.description}
+            />
+          ))}
         </Slider>
-        
       </Container>
     );
   }
