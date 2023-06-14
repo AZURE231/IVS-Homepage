@@ -22,7 +22,7 @@ const settings = {
   fade: true,
   infinite: true,
   autoplay: true,
-  speed: 500,
+  speed: 1000,
   autoplaySpeed: 5000,
   slidesToShow: 1,
   slidesToScroll: 1,
@@ -83,10 +83,12 @@ export default function Hero() {
       {/* Left Icon */}
       <IconButton
         aria-label="left-arrow"
-        variant="ghost"
+        variant="none"
         position="absolute"
         left={side}
         top={top}
+        color={"#757575"}
+        _hover={{color:"#bababa"}}
         transform={"translate(0%, -50%)"}
         zIndex={2}
         onClick={() => slider?.slickPrev()}
@@ -96,15 +98,17 @@ export default function Hero() {
       {/* Right Icon */}
       <IconButton
         aria-label="right-arrow"
-        variant="ghost"
+        variant="none"
         position="absolute"
         right={side}
         top={top}
+        color={"#757575"}
+        _hover={{color:"#bababa"}}
         transform={"translate(0%, -50%)"}
         zIndex={2}
         onClick={() => slider?.slickNext()}
       >
-        <BiRightArrowAlt size="40px" />
+        <BiRightArrowAlt size="40px"/>
       </IconButton>
       {/* Slider */}
       <Slider {...settings} ref={(slider) => setSlider(slider)}>

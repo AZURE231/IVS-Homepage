@@ -22,35 +22,34 @@ import {
   ChevronRightIcon,
 } from "@chakra-ui/icons";
 
-import { useEffect, useState } from 'react';
+import { useEffect, useState } from "react";
 
 export default function WithSubnavigation() {
   const { isOpen, onToggle } = useDisclosure();
-  const [ isScrolled, setIsScrolled ] = useState(false);
-  const [ bgColor, setBgColor ] = useState('transparent');
-  const [ minHeight, setMinHeight ] = useState('100px');
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [bgColor, setBgColor] = useState("transparent");
+  const [minHeight, setMinHeight] = useState("100px");
 
   useEffect(() => {
     const handleScroll = () => {
       const scrollTop = window.scrollY;
       if (scrollTop > 0 && !isScrolled) {
         setIsScrolled(true);
-        setBgColor('rgba(0, 0, 0, 0.7)')
-        setMinHeight('40px')
+        setBgColor("rgba(0, 0, 0, 0.7)");
+        setMinHeight("40px");
       } else if (scrollTop === 0 && isScrolled) {
         setIsScrolled(false);
-        setBgColor('transparent')
-        setMinHeight('100px')
+        setBgColor("transparent");
+        setMinHeight("100px");
       }
     };
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
 
     return () => {
-      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener("scroll", handleScroll);
     };
   }, [isScrolled]);
-
 
   return (
     <Box as="header" position="fixed" w="100%" top={0} zIndex={100}>
@@ -63,35 +62,44 @@ export default function WithSubnavigation() {
         px={{ base: 4 }}
         align={"center"}
       >
+        <Flex flex={{ base: 1 }}>
+          <Text
+            flex={{ base: 1 }}
+            textAlign={useBreakpointValue({ base: "center", md: "left" })}
+            fontFamily={"heading"}
+            fontSize={"4xl"}
+            fontWeight={1000}
+            color={"orange"}
+            pl={0}
+          >
+            IVS
+          </Text>
+
+          <Flex
+            display={{ base: "none", md: "flex" }}
+            ml={10}
+            justifyContent={"center"}
+          >
+            <DesktopNav />
+          </Flex>
+        </Flex>
         <Flex
-          flex={{ base: 1, md: "auto" }}
+          flex={{ base: "right", md: "auto" }}
           ml={{ base: -2 }}
           display={{ base: "flex", md: "none" }}
         >
           <IconButton
             onClick={onToggle}
             icon={
-              isOpen ? <CloseIcon w={3} h={3} /> : <HamburgerIcon w={5} h={5} />
+              isOpen ? (
+                <CloseIcon w={3} h={3} />
+              ) : (
+                <HamburgerIcon color={"white"} w={5} h={5} />
+              )
             }
             variant={"ghost"}
             aria-label={"Toggle Navigation"}
           />
-        </Flex>
-        <Flex flex={{ base: 1 }} justify={{ base: "center", md: "start" }}>
-          <Text
-            flex={{ base: 1 }} 
-            textAlign={useBreakpointValue({ base: "center", md: "left" })}
-            fontFamily={"heading"}
-            fontSize={"4xl"}
-            fontWeight={1000}
-            color={useColorModeValue("orange", "orange")}
-          >
-            IVS
-          </Text>
-
-          <Flex display={{ base: "none", md: "flex" }} ml={10}  justifyContent={"center"}>
-            <DesktopNav />
-          </Flex>
         </Flex>
       </Flex>
 
@@ -117,8 +125,9 @@ const DesktopNav = () => {
                 p={2}
                 href={navItem.href ?? "#"}
                 fontSize={"sm"}
-                fontWeight={500}
+                fontWeight={700}
                 color={linkColor}
+                transition={"all 0.5s"}
                 _hover={{
                   textDecoration: "none",
                   color: linkHoverColor,
@@ -292,22 +301,15 @@ const NAV_ITEMS: Array<NavItem> = [
         id: 3,
         label: "Quy trình phê duyệt",
         children: [
-          {id: 0,
-            label: "Phê duyệt nhân sự",
-            href: "#"
-          },
-          {id: 1,
-            label: "Quản lý hồ sơ giấy tờ",
-            href: "#"
-          }
-
-        ]
-      },  
+          { id: 0, label: "Phê duyệt nhân sự", href: "#" },
+          { id: 1, label: "Quản lý hồ sơ giấy tờ", href: "#" },
+        ],
+      },
       {
         id: 4,
         label: "kintone",
         href: "#",
-      }, 
+      },
     ],
   },
   {
