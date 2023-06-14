@@ -12,10 +12,11 @@ import {
 
 interface AvatarProps {
   id: number;
+  img: string;
   head: string;
   description: string;
 }
-export default function PeopleAvatar({ id, head, description }: AvatarProps) {
+export default function PeopleAvatar({ id, img, head, description }: AvatarProps) {
   const size = "96px";
 
   return (
@@ -24,14 +25,14 @@ export default function PeopleAvatar({ id, head, description }: AvatarProps) {
       bgColor={"#f2f2f2"}
       justifyContent="center"
       alignItems="center"
-      h="250px"
+      
       w="full"
       overflow="hidden"
     >
       {/* Ideally, only the box should be used. The <Flex /> is used to style the preview. */}
       <Box as="div" position="relative" w={size} h={size}>
         <Avatar
-          src="https://i.pravatar.cc/300"
+          src={img}
           size="full"
           position="absolute"
           top={0}

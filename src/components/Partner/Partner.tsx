@@ -53,7 +53,7 @@ export default class Responsive extends Component {
     };
 
     return (
-      <Container maxW={"full"}>
+      <Container maxW={"full"} mb={"60px"}>
         <Stack
           spacing={4}
           as={Container}
