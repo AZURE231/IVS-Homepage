@@ -82,13 +82,14 @@ export default function WithSubnavigation() {
             flex={{ base: 1 }} 
             textAlign={useBreakpointValue({ base: "center", md: "left" })}
             fontFamily={"heading"}
-            fontSize={"20px"}
+            fontSize={"4xl"}
+            fontWeight={1000}
             color={useColorModeValue("orange", "orange")}
           >
             IVS
           </Text>
 
-          <Flex display={{ base: "none", md: "flex" }} ml={10} >
+          <Flex display={{ base: "none", md: "flex" }} ml={10}  justifyContent={"center"}>
             <DesktopNav />
           </Flex>
         </Flex>
@@ -107,7 +108,7 @@ const DesktopNav = () => {
   const popoverContentBgColor = useColorModeValue("white", "gray.800");
 
   return (
-    <Stack direction={"row"} spacing={4}>
+    <Stack direction={"row"} spacing={4} pt={4}>
       {NAV_ITEMS.map((navItem) => (
         <Box key={navItem.label}>
           <Popover trigger={"hover"} placement={"bottom-start"}>

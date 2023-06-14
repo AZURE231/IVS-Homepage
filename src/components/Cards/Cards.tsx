@@ -58,6 +58,7 @@ export default function Card({ heading, description, icon, href, imgs }: CardPro
               fontSize={"2xl"}
               fontWeight={500}
               fontFamily={"body"}
+              transition={"all 0.5s"}
               _hover={{ color: "orange" }}
             >
               {heading}
