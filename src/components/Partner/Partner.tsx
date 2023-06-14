@@ -1,10 +1,4 @@
-import {
-  Heading,
-  Text,
-  Stack,
-  Container,
-  Image,
-} from "@chakra-ui/react";
+import { Heading, Text, Stack, Container, Image } from "@chakra-ui/react";
 import React, { Component } from "react";
 import Slider from "react-slick";
 
@@ -35,7 +29,6 @@ const partnerList = [
   },
 ];
 
-
 export default class Responsive extends Component {
   render() {
     var settings = {
@@ -63,12 +56,15 @@ export default class Responsive extends Component {
           pb={"40px"}
         >
           <Heading fontSize={"3xl"}>ĐỐI TÁC CỦA CHÚNG TÔI</Heading>
+          <div className="decorateLineGray">
+            <div className="decorateLineOrange"></div>
+          </div>
         </Stack>
         <Container maxW={"100%"}>
           {" "}
           <Slider {...settings}>
             {partnerList.map((partner) => (
-                <Image
+              <Image
                 objectFit={"scale-down"}
                 key={partner.id}
                 p={2}
@@ -77,7 +73,6 @@ export default class Responsive extends Component {
                 src={partner.img}
               />
             ))}
-            
           </Slider>
         </Container>
       </Container>

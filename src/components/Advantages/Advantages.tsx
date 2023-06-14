@@ -61,6 +61,9 @@ export default function Advantages() {
     <Box p={4}>
       <Stack spacing={4} as={Container} maxW={"3xl"} textAlign={"center"}>
         <Heading fontSize={"3xl"}>LỢI THẾ CẠNH TRANH CỦA IVS</Heading>
+        <div className="decorateLineGray">
+          <div className="decorateLineOrange"></div>
+        </div>
         <Text color={"gray.600"} fontSize={"xl"}>
           "Chúng tôi luôn coi khách hàng là khách mời tham dự một bữa tiệc mà
           chúng tôi là chủ nhà." -Jeff Bezos (Amazon)-

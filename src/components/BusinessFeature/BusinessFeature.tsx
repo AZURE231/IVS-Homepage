@@ -80,10 +80,13 @@ export default function BusinessFeature() {
         <Heading fontSize={{ base: "2xl", sm: "4xl" }} fontWeight={"bold"}>
           SẢN PHẨM PHẦN MỀM
         </Heading>
+        <div className="decorateLineGray"><div className="decorateLineOrange"></div></div>
+        
         <Text color={"gray.600"} fontSize={{ base: "sm", sm: "lg" }}>
           Ứng dụng công nghệ cao cho cuộc sống dễ dàng hơn.
         </Text>
       </Stack>
+
 
       <Container maxW={"6xl"} mt={12}>
         <SimpleGrid columns={{ base: 1, md: 2, lg: 3 }} spacing={0}>

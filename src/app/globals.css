@@ -2,3 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
+.decorateLineGray {
+    border-bottom: 1px solid #d1d1d1;
+    width: 100px;
+    margin: auto;
+    z-index: 1;
+}
+
+.decorateLineOrange{
+    border-bottom: 3px solid #f77902;
+    width: 40px;
+    margin: auto;
+    z-index: 2;
+}

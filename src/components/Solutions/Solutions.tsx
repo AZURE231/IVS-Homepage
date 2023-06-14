@@ -57,6 +57,9 @@ export default class Responsive extends Component {
           pb={"20px"}
         >
           <Heading fontSize={"3xl"}>MỘT SỐ GIẢI PHÁP NỔI BẬT</Heading>
+          <div className="decorateLineGray">
+            <div className="decorateLineOrange"></div>
+          </div>
         </Stack>
         <Slider {...settings}>
           {products.map((product) => (

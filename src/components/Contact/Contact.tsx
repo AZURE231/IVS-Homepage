@@ -31,10 +31,20 @@ import { BsGithub, BsDiscord, BsPerson } from "react-icons/bs";
 export default function Contact() {
   return (
     <Container backgroundColor={"#f2f2f2"} maxW={"full"} mt={"200px"}>
-      <Stack spacing={4} as={Container} maxW={"3xl"} textAlign={"center"} pt={"150px"}>
+      <Stack
+        spacing={4}
+        as={Container}
+        maxW={"3xl"}
+        textAlign={"center"}
+        pt={"150px"}
+      >
         <Heading fontSize={"3xl"}>CONTACT US</Heading>
+        <div className="decorateLineGray">
+          <div className="decorateLineOrange"></div>
+        </div>
         <Text color={"gray.600"} fontSize={"xl"}>
-        Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
+          Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+          accusantium doloremque
         </Text>
       </Stack>
       <Container bg="#f2f2f2" maxW="full" centerContent overflow="hidden">
@@ -47,16 +57,17 @@ export default function Contact() {
             p={{ sm: 5, md: 5, lg: 5 }}
           >
             <Box p={0}>
-              <VStack  maxW={"full"}>
+              <VStack maxW={"full"}>
                 <WrapItem>
                   <Box as={"form"}>
                     <Box py={{ base: 5, sm: 5, md: 8, lg: 10 }}>
-                      <SimpleGrid columns={{ base: 1, md: 2, lg: 3 }} spacing={10}>
-                      
+                      <SimpleGrid
+                        columns={{ base: 1, md: 2, lg: 3 }}
+                        spacing={10}
+                      >
                         <Button
                           size="md"
                           height="48px"
-                          
                           variant="ghost"
                           color="black"
                           _hover={{ border: "2px solid black" }}
@@ -67,7 +78,6 @@ export default function Contact() {
                         <Button
                           size="md"
                           height="48px"
-                          
                           variant="ghost"
                           color="black"
                           _hover={{ border: "2px solid black" }}
@@ -78,24 +88,20 @@ export default function Contact() {
                         <Button
                           size="md"
                           height="48px"
-                         
                           variant="ghost"
                           color="black"
                           _hover={{ border: "2px solid black" }}
-                          leftIcon={
-                            <MdLocationOn color="black" size="20px" />
-                          }
+                          leftIcon={<MdLocationOn color="black" size="20px" />}
                         >
                           Karnavati, India
                         </Button>
                       </SimpleGrid>
                     </Box>
-                  
                   </Box>
                 </WrapItem>
                 <WrapItem width={"full"}>
                   <Box bg="white" borderRadius="lg" width={"full"}>
-                    <Box m={8} color="#0B0E3F" >
+                    <Box m={8} color="#0B0E3F">
                       <VStack spacing={5}>
                         <FormControl id="name">
                           <FormLabel>Your Name</FormLabel>
@@ -132,7 +138,7 @@ export default function Contact() {
                             variant="solid"
                             bg="orange"
                             color="white"
-                            _hover={{bg:"green"}}
+                            _hover={{ bg: "green" }}
                           >
                             Send Message
                           </Button>
