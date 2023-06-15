@@ -26,7 +26,7 @@ import { BsPerson } from "react-icons/bs";
 
 export default function Contact() {
   return (
-    <Container backgroundColor={"#f2f2f2"} maxW={"full"} mt={"200px"}>
+    <Container backgroundColor={"#f2f2f2"} maxW={"full"}>
       <Stack
         spacing={4}
         as={Container}

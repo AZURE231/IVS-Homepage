@@ -57,7 +57,7 @@ const Feature = ({ title, text, icon, bg }: FeatureProps) => {
 
 export default function Products() {
   return (
-    <Box pl={150} pr={150} bg="black">
+    <Box pl={"10%"} pr={"10%"} bg="black">
       <SimpleGrid columns={{ base: 1, md: 3 }}>
         {featuresList.map((feature) => (
           <Feature

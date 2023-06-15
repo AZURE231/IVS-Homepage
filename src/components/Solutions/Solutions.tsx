@@ -45,7 +45,7 @@ export default class Responsive extends Component {
     return (
       <Container
         maxW={"full"}
-        maxH={"150px"}
+
         bgColor={"#f2f2f2"}
       >
         <Stack

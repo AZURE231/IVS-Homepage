@@ -82,7 +82,7 @@ const products = [
 export default function BusinessFeature() {
   return (
     <Box className="parallax">
-      <Box bgColor={"rgba(255,255,255,0.8)"} p={20}>
+      <Box bgColor={"rgba(255,255,255,0.8)"} pt={20} pb={20}>
         <Stack spacing={4} as={Container} maxW={"3xl"} textAlign={"center"}>
           <Heading fontSize={{ base: "2xl", sm: "4xl" }} fontWeight={"bold"}>
             SẢN PHẨM PHẦN MỀM
@@ -97,7 +97,7 @@ export default function BusinessFeature() {
         </Stack>
 
         <Container maxW={"6xl"} mt={12}>
-          <SimpleGrid columns={{ base: 1, md: 2, lg: 3 }} spacing={0}>
+          <SimpleGrid columns={{ base: 1, md: 2, lg: 3 }} spacing={4}>
             {products.map((product) => (
               <Card
                 key={product.id}
