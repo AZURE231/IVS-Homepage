@@ -54,7 +54,6 @@ export default function Card({ heading, description, icon, href, imgs }: CardPro
         <Box p={6} cursor={"pointer"}>
           <Stack spacing={0} align={"center"} mb={5}>
             <Heading
-              mt={"0px"}
               fontSize={"2xl"}
               fontWeight={500}
               fontFamily={"body"}

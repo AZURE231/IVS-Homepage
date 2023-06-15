@@ -58,7 +58,7 @@ const features = [
 
 export default function Advantages() {
   return (
-    <Box p={4}>
+    <Box p={4} mt={10}>
       <Stack spacing={4} as={Container} maxW={"3xl"} textAlign={"center"}>
         <Heading fontSize={"3xl"}>LỢI THẾ CẠNH TRANH CỦA IVS</Heading>
         <div className="decorateLineGray">
