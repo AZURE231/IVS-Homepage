@@ -1,4 +1,4 @@
-import { Heading, Text, Stack, Container, Image } from "@chakra-ui/react";
+import { Heading, Box, Text, Stack, Container, Image } from "@chakra-ui/react";
 import React, { Component } from "react";
 import Slider from "react-slick";
 
@@ -64,14 +64,20 @@ export default class Responsive extends Component {
           {" "}
           <Slider {...settings}>
             {partnerList.map((partner) => (
-              <Image
-                objectFit={"scale-down"}
-                key={partner.id}
-                p={2}
-                h={"100px"}
-                w={"full"}
-                src={partner.img}
-              />
+              
+                <Image
+                  objectFit={"scale-down"}
+                  key={partner.id}
+                  p={2}
+                  h={"100px"}
+                  w={"full"}
+                  src={partner.img}
+                  opacity={0.6}
+                  _hover={{opacity:1}}
+                  transition={"all 0.5s"}
+                >
+                </Image>
+              
             ))}
           </Slider>
         </Container>
