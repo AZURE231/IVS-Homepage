@@ -1,15 +1,11 @@
 import {
   Stack,
   Container,
-  Flex,
   Box,
   Heading,
   Text,
-  IconButton,
   Button,
   VStack,
-  HStack,
-  Wrap,
   WrapItem,
   FormControl,
   FormLabel,
@@ -26,7 +22,7 @@ import {
   MdFacebook,
   MdOutlineEmail,
 } from "react-icons/md";
-import { BsGithub, BsDiscord, BsPerson } from "react-icons/bs";
+import { BsPerson } from "react-icons/bs";
 
 export default function Contact() {
   return (

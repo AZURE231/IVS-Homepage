@@ -64,7 +64,7 @@ export default class Responsive extends Component {
         <Slider {...settings}>
           {products.map((product) => (
             <PeopleAvatar
-              id={product.id}
+              key={product.id}
               img={product.img}
               head={product.head}
               description={product.description}

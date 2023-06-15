@@ -11,17 +11,15 @@ import {
 } from "@chakra-ui/react";
 
 interface AvatarProps {
-  id: number;
   img: string;
   head: string;
   description: string;
 }
-export default function PeopleAvatar({ id, img, head, description }: AvatarProps) {
+export default function PeopleAvatar({ img, head, description }: AvatarProps) {
   const size = "96px";
 
   return (
     <VStack
-      key={id}
       bgColor={"#f2f2f2"}
       justifyContent="center"
       alignItems="center"

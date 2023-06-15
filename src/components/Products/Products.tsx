@@ -61,6 +61,7 @@ export default function Products() {
       <SimpleGrid columns={{ base: 1, md: 3 }}>
         {featuresList.map((feature) => (
           <Feature
+            key={feature.id}
             icon={<Icon as={feature.icon} w={10} h={10} />}
             title={feature.title}
             text={feature.text}

@@ -65,8 +65,8 @@ export default function Advantages() {
           <div className="decorateLineOrange"></div>
         </div>
         <Text color={"gray.600"} fontSize={"xl"}>
-          "Chúng tôi luôn coi khách hàng là khách mời tham dự một bữa tiệc mà
-          chúng tôi là chủ nhà." -Jeff Bezos (Amazon)-
+        &quot;Chúng tôi luôn coi khách hàng là khách mời tham dự một bữa tiệc mà
+          chúng tôi là chủ nhà.&quot; -Jeff Bezos (Amazon)-
         </Text>
       </Stack>
 
