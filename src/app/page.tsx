@@ -9,7 +9,6 @@ import NavBar from "@/components/NavBar/NavBar";
 import Partner from "@/components/Partner/Partner";
 import Products from "@/components/Products/Products";
 import Solutions from "@/components/Solutions/Solutions";
-import { Carousel } from "flowbite";
 
 
 export default function Home() {
