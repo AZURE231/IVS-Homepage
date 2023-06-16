@@ -1,5 +1,4 @@
 import {
-  Avatar,
   Heading,
   Box,
   Center,
@@ -8,20 +7,11 @@ import {
   Text,
   Stack,
   useColorModeValue,
-  chakra,
-  shouldForwardProp,
 } from "@chakra-ui/react";
 
 import { motion, isValidMotionProp } from "framer-motion";
 import { ReactElement } from "react";
 
-const ChakraBox = chakra(motion.div, {
-  /**
-   * Allow motion props and non-Chakra props to be forwarded.
-   */
-  shouldForwardProp: (prop) =>
-    isValidMotionProp(prop) || shouldForwardProp(prop),
-});
 
 interface CardProps {
   heading: string;
@@ -40,7 +30,7 @@ export default function Card({
 }: CardProps) {
   return (
     <Center py={6}>
-      <ChakraBox
+      <motion.div
         initial={{ y: 150 }}
         whileInView={{ y: 0 }}
         transition={{ type: "spring", damping: 30}}
@@ -79,7 +69,7 @@ export default function Card({
             </Stack>
           </Box>
         </Box>
-      </ChakraBox>
+      </motion.div>
     </Center>
   );
 }

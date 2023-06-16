@@ -7,8 +7,6 @@ import {
   Text,
   Stack,
   HStack,
-  chakra,
-  shouldForwardProp,
   VStack,
 } from "@chakra-ui/react";
 import { CiPizza } from "react-icons/ci";
@@ -17,7 +15,7 @@ import { CiInstagram } from "react-icons/ci";
 import { CiLemon } from "react-icons/ci";
 import { CiMemoPad } from "react-icons/ci";
 import { CiPen } from "react-icons/ci";
-import { motion, isValidMotionProp } from "framer-motion";
+import { motion } from "framer-motion";
 
 // Replace test data with your own
 const features = [
@@ -59,18 +57,11 @@ const features = [
   },
 ];
 
-const ChakraBox = chakra(motion.div, {
-  /**
-   * Allow motion props and non-Chakra props to be forwarded.
-   */
-  shouldForwardProp: (prop) =>
-    isValidMotionProp(prop) || shouldForwardProp(prop),
-});
 
 export default function Advantages() {
   return (
     <Box p={4} mt={10}>
-      <ChakraBox
+      <motion.div
         initial={{ y: 100 }}
         whileInView={{ y: 0 }}
         transition={{ type: "spring", damping: 10 }}
@@ -86,12 +77,12 @@ export default function Advantages() {
             tiệc mà chúng tôi là chủ nhà&quot; -Jeff Bezos (Amazon)-
           </Text>
         </Stack>
-      </ChakraBox>
+      </motion.div>
 
       <Container maxW={"6xl"} mt={10}>
         <SimpleGrid columns={{ base: 1, md: 2, lg: 3 }} spacing={10}>
           {features.map((feature) => (
-            <ChakraBox
+            <motion.div
               key={feature.id}
               initial={{ y: 100 }}
               whileInView={{ y: 0 }}
@@ -114,7 +105,7 @@ export default function Advantages() {
                   <Text color={"gray.600"}>{feature.text}</Text>
                 </VStack>
               </HStack>
-            </ChakraBox>
+            </motion.div>
           ))}
         </SimpleGrid>
       </Container>

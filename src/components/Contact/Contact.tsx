@@ -12,8 +12,6 @@ import {
   Input,
   InputGroup,
   InputLeftElement,
-  chakra,
-  shouldForwardProp,
   Textarea,
   SimpleGrid,
 } from "@chakra-ui/react";
@@ -21,23 +19,15 @@ import {
   MdPhone,
   MdEmail,
   MdLocationOn,
-  MdFacebook,
   MdOutlineEmail,
 } from "react-icons/md";
 import { BsPerson } from "react-icons/bs";
-import { motion, isValidMotionProp } from "framer-motion";
+import { motion } from "framer-motion";
 
-const ChakraBox = chakra(motion.div, {
-  /**
-   * Allow motion props and non-Chakra props to be forwarded.
-   */
-  shouldForwardProp: (prop) =>
-    isValidMotionProp(prop) || shouldForwardProp(prop),
-});
 
 export default function Contact() {
   return (
-    <ChakraBox
+    <motion.div
       initial={{ y: 150 }}
       whileInView={{ y: 0 }}
       transition={{ type: "spring", damping: 30 }}
@@ -166,6 +156,6 @@ export default function Contact() {
           </VStack>
         </Container>
       </Container>
-    </ChakraBox>
+    </motion.div>
   );
 }

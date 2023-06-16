@@ -2,13 +2,11 @@ import {
   Heading,
   Stack,
   Container,
-  chakra,
-  shouldForwardProp,
 } from "@chakra-ui/react";
 import React, { Component } from "react";
 import Slider from "react-slick";
 import PeopleAvatar from "./PeopleAvatar";
-import { motion, isValidMotionProp } from "framer-motion";
+import { motion } from "framer-motion";
 
 const products = [
   {
@@ -34,13 +32,6 @@ const products = [
   },
 ];
 
-const ChakraBox = chakra(motion.div, {
-  /**
-   * Allow motion props and non-Chakra props to be forwarded.
-   */
-  shouldForwardProp: (prop) =>
-    isValidMotionProp(prop) || shouldForwardProp(prop),
-});
 export default class Responsive extends Component {
   render() {
     var settings = {
@@ -57,7 +48,7 @@ export default class Responsive extends Component {
       arrows: false,
     };
     return (
-      <ChakraBox
+      <motion.div
         initial={{ y: 150 }}
         whileInView={{ y: 0 }}
         transition={{ type: "spring", damping: 30 }}
@@ -88,7 +79,7 @@ export default class Responsive extends Component {
             ))}
           </Slider>
         </Container>
-      </ChakraBox>
+      </motion.div>
     );
   }
 }

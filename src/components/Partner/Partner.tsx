@@ -1,16 +1,12 @@
 import {
   Heading,
-  chakra,
-  shouldForwardProp,
-  Box,
-  Text,
   Stack,
   Container,
   Image,
 } from "@chakra-ui/react";
 import React, { Component } from "react";
 import Slider from "react-slick";
-import { motion, isValidMotionProp } from "framer-motion";
+import { motion } from "framer-motion";
 
 const partnerList = [
   {
@@ -39,13 +35,6 @@ const partnerList = [
   },
 ];
 
-const ChakraBox = chakra(motion.div, {
-  /**
-   * Allow motion props and non-Chakra props to be forwarded.
-   */
-  shouldForwardProp: (prop) =>
-    isValidMotionProp(prop) || shouldForwardProp(prop),
-});
 
 export default class Responsive extends Component {
   render() {
@@ -64,7 +53,7 @@ export default class Responsive extends Component {
     };
 
     return (
-      <ChakraBox
+      <motion.div
         initial={{ y: 150 }}
         whileInView={{ y: 0 }}
         transition={{ type: "spring", damping: 30 }}
@@ -103,7 +92,7 @@ export default class Responsive extends Component {
             </Slider>
           </Container>
         </Container>
-      </ChakraBox>
+      </motion.div>
     );
   }
 }
