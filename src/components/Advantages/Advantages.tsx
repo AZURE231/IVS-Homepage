@@ -92,16 +92,13 @@ export default function Advantages() {
         <SimpleGrid columns={{ base: 1, md: 2, lg: 3 }} spacing={10}>
           {features.map((feature) => (
             <ChakraBox
+              key={feature.id}
               initial={{ y: 100 }}
               whileInView={{ y: 0 }}
               transition={{ type: "spring", damping: 10 }}
               viewport={{ once: true }}
             >
-              <HStack
-                key={feature.id}
-                align={"top"}
-                _hover={{ color: "orange" }}
-              >
+              <HStack align={"top"} _hover={{ color: "orange" }}>
                 <Box color={"orange"} px={2}>
                   <Icon as={feature.logo} fontSize={"50px"} />
                 </Box>
