@@ -1,7 +1,14 @@
-import { Heading, Stack, Container } from "@chakra-ui/react";
+import {
+  Heading,
+  Stack,
+  Container,
+  chakra,
+  shouldForwardProp,
+} from "@chakra-ui/react";
 import React, { Component } from "react";
 import Slider from "react-slick";
 import PeopleAvatar from "./PeopleAvatar";
+import { motion, isValidMotionProp } from "framer-motion";
 
 const products = [
   {
@@ -27,6 +34,13 @@ const products = [
   },
 ];
 
+const ChakraBox = chakra(motion.div, {
+  /**
+   * Allow motion props and non-Chakra props to be forwarded.
+   */
+  shouldForwardProp: (prop) =>
+    isValidMotionProp(prop) || shouldForwardProp(prop),
+});
 export default class Responsive extends Component {
   render() {
     var settings = {
@@ -43,35 +57,38 @@ export default class Responsive extends Component {
       arrows: false,
     };
     return (
-      <Container
-        maxW={"full"}
-
-        bgColor={"#f2f2f2"}
+      <ChakraBox
+        initial={{ y: 150 }}
+        whileInView={{ y: 0 }}
+        transition={{ type: "spring", damping: 30 }}
+        viewport={{ once: true }}
       >
-        <Stack
-          spacing={4}
-          as={Container}
-          maxW={"3xl"}
-          textAlign={"center"}
-          pt={"60px"}
-          pb={"20px"}
-        >
-          <Heading fontSize={"3xl"}>MỘT SỐ GIẢI PHÁP NỔI BẬT</Heading>
-          <div className="decorateLineGray">
-            <div className="decorateLineOrange"></div>
-          </div>
-        </Stack>
-        <Slider {...settings}>
-          {products.map((product) => (
-            <PeopleAvatar
-              key={product.id}
-              img={product.img}
-              head={product.head}
-              description={product.description}
-            />
-          ))}
-        </Slider>
-      </Container>
+        <Container maxW={"full"} bgColor={"#f2f2f2"}>
+          <Stack
+            spacing={4}
+            as={Container}
+            maxW={"3xl"}
+            textAlign={"center"}
+            pt={"60px"}
+            pb={"20px"}
+          >
+            <Heading fontSize={"3xl"}>MỘT SỐ GIẢI PHÁP NỔI BẬT</Heading>
+            <div className="decorateLineGray">
+              <div className="decorateLineOrange"></div>
+            </div>
+          </Stack>
+          <Slider {...settings}>
+            {products.map((product) => (
+              <PeopleAvatar
+                key={product.id}
+                img={product.img}
+                head={product.head}
+                description={product.description}
+              />
+            ))}
+          </Slider>
+        </Container>
+      </ChakraBox>
     );
   }
 }

@@ -1,6 +1,16 @@
-import { Heading, Box, Text, Stack, Container, Image } from "@chakra-ui/react";
+import {
+  Heading,
+  chakra,
+  shouldForwardProp,
+  Box,
+  Text,
+  Stack,
+  Container,
+  Image,
+} from "@chakra-ui/react";
 import React, { Component } from "react";
 import Slider from "react-slick";
+import { motion, isValidMotionProp } from "framer-motion";
 
 const partnerList = [
   {
@@ -29,6 +39,14 @@ const partnerList = [
   },
 ];
 
+const ChakraBox = chakra(motion.div, {
+  /**
+   * Allow motion props and non-Chakra props to be forwarded.
+   */
+  shouldForwardProp: (prop) =>
+    isValidMotionProp(prop) || shouldForwardProp(prop),
+});
+
 export default class Responsive extends Component {
   render() {
     var settings = {
@@ -46,25 +64,30 @@ export default class Responsive extends Component {
     };
 
     return (
-      <Container maxW={"full"} mb={"60px"}>
-        <Stack
-          spacing={4}
-          as={Container}
-          maxW={"3xl"}
-          textAlign={"center"}
-          pt={"100px"}
-          pb={"40px"}
-        >
-          <Heading fontSize={"3xl"}>ĐỐI TÁC CỦA CHÚNG TÔI</Heading>
-          <div className="decorateLineGray">
-            <div className="decorateLineOrange"></div>
-          </div>
-        </Stack>
-        <Container maxW={"100%"}>
-          {" "}
-          <Slider {...settings}>
-            {partnerList.map((partner) => (
-              
+      <ChakraBox
+        initial={{ y: 150 }}
+        whileInView={{ y: 0 }}
+        transition={{ type: "spring", damping: 30 }}
+        viewport={{ once: true }}
+      >
+        <Container maxW={"full"} mb={"60px"}>
+          <Stack
+            spacing={4}
+            as={Container}
+            maxW={"3xl"}
+            textAlign={"center"}
+            pt={"100px"}
+            pb={"40px"}
+          >
+            <Heading fontSize={"3xl"}>ĐỐI TÁC CỦA CHÚNG TÔI</Heading>
+            <div className="decorateLineGray">
+              <div className="decorateLineOrange"></div>
+            </div>
+          </Stack>
+          <Container maxW={"100%"}>
+            {" "}
+            <Slider {...settings}>
+              {partnerList.map((partner) => (
                 <Image
                   objectFit={"scale-down"}
                   key={partner.id}
@@ -73,15 +96,14 @@ export default class Responsive extends Component {
                   w={"full"}
                   src={partner.img}
                   opacity={0.6}
-                  _hover={{opacity:1}}
+                  _hover={{ opacity: 1 }}
                   transition={"all 0.5s"}
-                >
-                </Image>
-              
-            ))}
-          </Slider>
+                ></Image>
+              ))}
+            </Slider>
+          </Container>
         </Container>
-      </Container>
+      </ChakraBox>
     );
   }
 }

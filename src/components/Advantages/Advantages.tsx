@@ -7,6 +7,8 @@ import {
   Text,
   Stack,
   HStack,
+  chakra,
+  shouldForwardProp,
   VStack,
 } from "@chakra-ui/react";
 import { CiPizza } from "react-icons/ci";
@@ -15,6 +17,7 @@ import { CiInstagram } from "react-icons/ci";
 import { CiLemon } from "react-icons/ci";
 import { CiMemoPad } from "react-icons/ci";
 import { CiPen } from "react-icons/ci";
+import { motion, isValidMotionProp } from "framer-motion";
 
 // Replace test data with your own
 const features = [
@@ -56,39 +59,65 @@ const features = [
   },
 ];
 
+const ChakraBox = chakra(motion.div, {
+  /**
+   * Allow motion props and non-Chakra props to be forwarded.
+   */
+  shouldForwardProp: (prop) =>
+    isValidMotionProp(prop) || shouldForwardProp(prop),
+});
+
 export default function Advantages() {
   return (
     <Box p={4} mt={10}>
-      <Stack spacing={4} as={Container} maxW={"3xl"} textAlign={"center"}>
-        <Heading fontSize={"3xl"}>LỢI THẾ CẠNH TRANH CỦA IVS</Heading>
-        <div className="decorateLineGray">
-          <div className="decorateLineOrange"></div>
-        </div>
-        <Text color={"gray.600"} fontSize={"xl"}>
-        &quot;Chúng tôi luôn coi khách hàng là khách mời tham dự một bữa tiệc mà
-          chúng tôi là chủ nhà&quot; -Jeff Bezos (Amazon)-
-        </Text>
-      </Stack>
+      <ChakraBox
+        initial={{ y: 100 }}
+        whileInView={{ y: 0 }}
+        transition={{ type: "spring", damping: 10 }}
+        viewport={{ once: true }}
+      >
+        <Stack spacing={4} as={Container} maxW={"3xl"} textAlign={"center"}>
+          <Heading fontSize={"3xl"}>LỢI THẾ CẠNH TRANH CỦA IVS</Heading>
+          <div className="decorateLineGray">
+            <div className="decorateLineOrange"></div>
+          </div>
+          <Text color={"gray.600"} fontSize={"xl"}>
+            &quot;Chúng tôi luôn coi khách hàng là khách mời tham dự một bữa
+            tiệc mà chúng tôi là chủ nhà&quot; -Jeff Bezos (Amazon)-
+          </Text>
+        </Stack>
+      </ChakraBox>
 
-      <Container maxW={"6xl"} mt={10} >
+      <Container maxW={"6xl"} mt={10}>
         <SimpleGrid columns={{ base: 1, md: 2, lg: 3 }} spacing={10}>
           {features.map((feature) => (
-            <HStack key={feature.id} align={"top"} _hover={{ color: "orange" }}>
-              <Box color={"orange"} px={2}>
-                <Icon as={feature.logo} fontSize={"50px"} />
-              </Box>
-              <VStack align={"start"}>
-                <Text
-                  transition={"all 0.5s"}
-                  fontWeight={700}
-                  fontSize={20}
-                  cursor={"pointer"}
-                >
-                  {feature.title}
-                </Text>
-                <Text color={"gray.600"}>{feature.text}</Text>
-              </VStack>
-            </HStack>
+            <ChakraBox
+              initial={{ y: 100 }}
+              whileInView={{ y: 0 }}
+              transition={{ type: "spring", damping: 10 }}
+              viewport={{ once: true }}
+            >
+              <HStack
+                key={feature.id}
+                align={"top"}
+                _hover={{ color: "orange" }}
+              >
+                <Box color={"orange"} px={2}>
+                  <Icon as={feature.logo} fontSize={"50px"} />
+                </Box>
+                <VStack align={"start"}>
+                  <Text
+                    transition={"all 0.5s"}
+                    fontWeight={700}
+                    fontSize={20}
+                    cursor={"pointer"}
+                  >
+                    {feature.title}
+                  </Text>
+                  <Text color={"gray.600"}>{feature.text}</Text>
+                </VStack>
+              </HStack>
+            </ChakraBox>
           ))}
         </SimpleGrid>
       </Container>
