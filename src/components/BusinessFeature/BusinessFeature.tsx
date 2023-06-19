@@ -27,7 +27,7 @@ const products = [
     id: 0,
     head: "IFMS",
     description:
-      "Lorem ipsum dolor sit amet, consectetur elit, sed do eiusmod tempor ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "Indivi Factory Management System (IFMS) là giải pháp quản lý sản xuất được phát triển bởi công ty IVS. IFMS là một phần mềm dễ dàng sử dụng và có khả năng tích hợp được nhiều thông tin. IFMS hiện thực hóa mọi ý tưởng quản lý của bạn.",
     icon: BsSpeedometer2,
     img: "https://picsum.photos/id/106/500/500",
     href: "#",
@@ -36,7 +36,7 @@ const products = [
     id: 1,
     head: "IHRM",
     description:
-      "Sed ut perspiciatis unde omnis iste natus error sit voluptatem doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.",
+      "Indivi Human Resources Management (IHRM) là phần mềm quản lý thông tin nhân viên, chấm công, tính lương, và các nghiệp vụ nhân sự khác. IHRM được kiểm chứng thực tiễn cho nhiều khách hàng ở Việt Nam.",
     icon: CiViewList,
     img: "https://picsum.photos/id/104/500/500",
     href: "#",
@@ -45,7 +45,7 @@ const products = [
     id: 2,
     head: "IWMS",
     description:
-      "Nemo enim ipsam voluptatem quia voluptas sit aut odit aut fugit, sed quia magni dolores eos qui ratione voluptatem sequi nesciunt Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet.",
+      "Indivi Warehouse Management System (IWMS) là một giải pháp quản lý hàng tồn kho được xây dựng bởi các kỹ sư hàng đầu của công ty IVS. IWMS là sự lựa chọn tối ưu cho các công ty muốn quản lý tồn kho một cách hiệu quả và chuyên nghiệp.",
     icon: AiOutlineEye,
     img: "https://picsum.photos/id/103/500/500",
     href: "#",
@@ -54,7 +54,7 @@ const products = [
     id: 3,
     head: "IVS Workflow",
     description:
-      "Lorem ipsum dolor sit amet, consectetur elit, sed do eiusmod tempor ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "IVS WORKFLOW là bộ sản phẩm dành cho quy trình phê duyệt trong doanh nghiệp qua nhiều cấp bao gồm chữ kí điện tử và email phê duyệt. IVS WORKFLOW giúp doanh nghiệp tiết kiệm thời gian và giảm chi phí cho việc quản lý hồ sơ giấy tờ.",
     icon: BsSpeedometer2,
     img: "https://picsum.photos/id/102/500/500",
     href: "#",
@@ -63,7 +63,7 @@ const products = [
     id: 4,
     head: "kintone",
     description:
-      "Sed ut perspiciatis unde omnis iste natus error sit voluptatem doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.",
+      "kintone là dịch vụ điện toán đám mây cho phép người dùng nhanh chóng hệ thống hóa quản lý dựa trên nền tảng nghiệp vụ của từng công ty. Có hai phiên bản: kintone Light và kintone Standard linh động theo nhu cầu của người dùng.",
     icon: CiViewList,
     img: "https://picsum.photos/id/100/500/500",
     href: "#",

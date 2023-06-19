@@ -22,37 +22,37 @@ const features = [
   {
     id: 0,
     title: "Đội ngũ nhân sự giàu kinh nghiệm",
-    text: "Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident",
+    text: "Với đội ngũ chuyên gia giàu kinh nghiệm trong các linh vực quản lý bán hàng, sản xuất và logistics. Chúng tôi đã triển khai thành công nhiều dự án với nhiều thị trường trên thế giới.",
     logo: CiApple,
   },
   {
     id: 1,
     title: "Giao diện thân thiện với người dùng",
-    text: "Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat tarad limino ata",
+    text: "Được thiết kế bởi các chuyên gia, các sản phẩm phần mềm do công ty IVS xây dựng đểu có giao diện thân thiện, dễ sử dụng. Người dùng có thể dễ dàng sử dụng hệ thống của IVS mà không cần đến tài liệu hướng dẫn.",
     logo: CiInstagram,
   },
   {
     id: 2,
     title: "Linh động theo từng khách hàng",
-    text: "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur",
+    text: "Tại Công ty IVS, các chuyên gia không chỉ tiếp nhận các yêu cầu mà còn tư vấn về xây dựng hệ thống linh động tùy theo nét đặc trưng của từng khách hàng nhằm đảm bảo sự dễ dàng khi sử dụng cho người dùng.",
     logo: CiLemon,
   },
   {
     id: 3,
     title: "Dịch vụ hỗ trợ nhanh chóng",
-    text: "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur",
+    text: "Đội ngũ bảo trì, hỗ trợ vận hành, xử lí sự cố trong suốt quá trình sử dụng hệ thống. Các nhân viên của IVS nhiệt tình hỗ trợ giúp khách hàng yên tâm vì luôn có chuyên gia bên cạnh mình khi sử dụng hệ thống.",
     logo: CiMemoPad,
   },
   {
     id: 4,
     title: "Sản phẩm theo tiêu chuẩn Nhật Bản",
-    text: "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque",
+    text: "Tại IVS, chất lượng sản phẩm luôn là tiêu chuẩn hàng đầu. Chúng tôi cam kết mang đến cho khách hàng sự hài lòng nhất khi lựa chọn IVS để xây dụng hệ thống cho quý khách hàng.",
     logo: CiPen,
   },
   {
     id: 5,
     title: "Có chi nhánh trên toàn quốc",
-    text: "Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi",
+    text: "Hiện tại, Công ty IVs đã có 4 chi nhánh trên 3 miền Bắc - Trung - Nam nhằm đảm bảo hỗ trợ khách hàng tốt nhất, nhanh chóng nhất.",
     logo: CiPizza,
   },
 ];

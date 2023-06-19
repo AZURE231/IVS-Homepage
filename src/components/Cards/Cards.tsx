@@ -39,7 +39,7 @@ export default function Card({
         <Box
           maxW={"350px"}
           w={"full"}
-          maxH={"600px"}
+          minH={"500px"}
           bg={useColorModeValue("white", "gray.800")}
           boxShadow={"2xl"}
           rounded={"md"}
