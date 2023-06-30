@@ -19,7 +19,6 @@ export default function Home() {
       <Products/>
       <BusinessFeature/>
       <Advantages/>
-      {/* <Partner/> */}
       <Partner/>
       <Solutions/>
       <Contact/>

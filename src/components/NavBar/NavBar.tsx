@@ -90,9 +90,10 @@ export default function WithSubnavigation() {
         >
           <IconButton
             onClick={onToggle}
+            _hover={{color:"transparent"}}
             icon={
               isOpen ? (
-                <CloseIcon w={3} h={3} />
+                <CloseIcon w={3} h={3} color={"white"}/>
               ) : (
                 <HamburgerIcon color={"white"} w={5} h={5} />
               )
@@ -144,7 +145,6 @@ const DesktopNav = () => {
                 bg={popoverContentBgColor}
                 p={4}
                 rounded={"xl"}
-                minW={"sm"}
               >
                 <Stack>
                   {navItem.children.map((child) => (
@@ -190,7 +190,7 @@ const DesktopSubNav = ({ label, href, subLabel }: NavItem) => {
           align={"center"}
           flex={1}
         >
-          <Icon color={"pink.400"} w={5} h={5} as={ChevronRightIcon} />
+          { (<Icon color={"pink.400"} w={5} h={5} as={ChevronRightIcon} />)}
         </Flex>
       </Stack>
     </Link>
