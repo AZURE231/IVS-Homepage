@@ -71,23 +71,34 @@ export default function Contact() {
         duration: 2000,
         position: "top",
       })
-    } catch ({error}:any) {
+    } catch (error:unknown) {
       setState((prev) => ({
         ...prev,
         isLoading:false,
-        error:error.message,
+        
       }));
+      if (error instanceof Error) return error.message
+        return String(error)
     }
     
   };
 
   return (
+    
     <motion.div
       initial={{ y: 150 }}
       whileInView={{ y: 0 }}
       transition={{ type: "spring", damping: 30 }}
       viewport={{ once: true }}
     >
+      {error && (
+        toast({
+          title: "Failed to send message.",
+          status: "error",
+          duration: 2000,
+          position: "top",
+        })
+      )}
       <Container backgroundColor={"#f2f2f2"} maxW={"full"}>
         <Stack
           spacing={4}
